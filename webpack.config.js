@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const isDev = process.env.NODE_ENV === 'development'
+const config = require('./public/config')[isDev ? 'dev' : 'build']
 
 module.exports = {
   mode: 'development',
@@ -25,6 +27,7 @@ module.exports = {
           removeAttributeQuotes: false, //是否删除属性的双引号
           collapseWhitespace: false, //是否折叠空白
       },
+      config: config.template,
       // hash: true //是否加上hash，默认是 false
   })
   ]

@@ -38,3 +38,19 @@ npm install html-webpack-plugin -D
 结合config的骚操作
 
 
+配置script
+
+~~~shell
+npm install cross-env -D
+~~~
+
+~~~json
+{
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development webpack",
+        "build": "cross-env NODE_ENV=production webpack"
+    }
+}
+~~~
+
+
