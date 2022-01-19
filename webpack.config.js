@@ -19,7 +19,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
+      template: './public/index.html', // 模板文件目录
+      filename: 'index.html', //打包后的文件名
+      minify: {
+          removeAttributeQuotes: false, //是否删除属性的双引号
+          collapseWhitespace: false, //是否折叠空白
+      },
+      // hash: true //是否加上hash，默认是 false
+  })
   ]
 }

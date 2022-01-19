@@ -28,3 +28,13 @@ npm install @babel/runtime @babel/runtime-corejs3
 }
 
 ~~~
+
+## 引入html模板
+
+~~~shell
+npm install html-webpack-plugin -D 
+~~~
+
+结合config的骚操作
+
+
