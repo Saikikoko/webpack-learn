@@ -66,5 +66,12 @@ npm install webpack-dev-server -D
 
 ## devtool
 
+## 处理样式
+webpack不能直接处理css样式，需要借助loader进行处理，普通的CSS样式需要借助style-loader、css-loader，考虑到兼容性问题，还需要借助postcss-loader，如果是处理less或者sass，则还要借助sass-loader和less-loader
+
+~~~shell
+npm install style-loader sass-loader css-loader postcss-loader autoprefixer less -D
+~~~
+
 
 

@@ -26,6 +26,27 @@ module.exports = {
         test: /\.jsx?$/,
         use: ['babel-loader'],
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(sc|sa|c)ss$/,
+        use: ['style-loader', 'css-loader', {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: function () {
+                return [
+                  require('autoprefixer')({
+                    "overrideBrowserslist": [
+                      ">0.25%",
+                      "not dead"
+                    ]
+                  })
+                ]
+              }
+            }
+          }
+        }, 'sass-loader'],
+        exclude: /node_modules/,
       }
     ]
   },

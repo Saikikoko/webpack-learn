@@ -1,3 +1,4 @@
+import './index.sass'
 class Animal {
   constructor(name) {
     this.name = name
