@@ -64,5 +64,7 @@ npm install webpack-dev-server -D
 - 启用 overlay 后，当编译出错时，会在浏览器窗口全屏输出错误，默认是关闭的。
 - clientLogLevel: 当使用内联模式时，在浏览器的控制台将显示消息，如：在重新加载之前，在一个错误之前，或者模块热替换启用时。如果你不喜欢看这些信息，可以将其设置为 silent (none 即将被移除)。
 
+## devtool
+
 
 

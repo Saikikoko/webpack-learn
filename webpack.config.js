@@ -10,6 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), 
     filename: 'bundle.js'
   },
+  devtool: 'cheap-module-eval-source-map', //开发环境下使用
   devServer: {
     port: '3000', //默认是8080
     quiet: false, //默认不启用
