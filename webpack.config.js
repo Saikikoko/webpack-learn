@@ -47,6 +47,16 @@ module.exports = {
           }
         }, 'sass-loader'],
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(jpg|webp|png|jpeg|svg|eot|ttf|woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10240, //10K
+          }
+        },
+        exclude: /node_modules/,
       }
     ]
   },

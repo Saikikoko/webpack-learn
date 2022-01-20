@@ -1,4 +1,5 @@
 import './index.sass'
+import './font/iconfont.css'
 class Animal {
   constructor(name) {
     this.name = name

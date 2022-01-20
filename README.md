@@ -73,5 +73,17 @@ webpack不能直接处理css样式，需要借助loader进行处理，普通的C
 npm install style-loader sass-loader css-loader postcss-loader autoprefixer less -D
 ~~~
 
+- style-loader 动态创建 style 标签，将 css 插入到 head 中.
+- css-loader 负责处理 @import 等语句。
+- postcss-loader 和 autoprefixer，自动生成浏览器兼容性前缀 —— 2020了，应该没人去自己徒手去写浏览器前缀了吧
+- sass-loader 负责处理编译 .sass 文件,将其转为 css
+
+这里，我们之间在 webpack.config.js 写了 autoprefixer 需要兼容的浏览器，仅是为了方便展示。推荐大家在根目录下创建 .browserslistrc，将对应的规则写在此文件中，除了 autoprefixer 使用外，@babel/preset-env、stylelint、eslint-plugin-conmpat 等都可以共用
+
+## 处理图片和字体文件
+
+~~~shell
+npm i -D url-loader
+~~~
 
 
