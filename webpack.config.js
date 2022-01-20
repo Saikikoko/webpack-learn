@@ -8,7 +8,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'), 
-    filename: 'bundle.js'
+    filename: 'bundle.[hash].js',
+    publicPath: '/'
   },
   devtool: 'cheap-module-eval-source-map', //开发环境下使用
   devServer: {
