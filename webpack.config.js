@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const isDev = process.env.NODE_ENV === 'development'
 const config = require('./public/config')[isDev ? 'dev' : 'build']
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -71,6 +72,7 @@ module.exports = {
       },
       config: config.template,
       // hash: true //是否加上hash，默认是 false
-  })
+    }),
+    new CleanWebpackPlugin()
   ]
 }

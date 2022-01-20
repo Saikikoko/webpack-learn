@@ -86,4 +86,12 @@ npm install style-loader sass-loader css-loader postcss-loader autoprefixer less
 npm i -D url-loader
 ~~~
 
+## 清空dist目录
+
+~~~shell
+npm i -D clean-webpack-plugin
+~~~
+
+
+
 
