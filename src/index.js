@@ -1,6 +1,6 @@
 class Animal {
   constructor(name) {
-    this.name
+    this.name = name
   }
 
   getName() {
@@ -9,3 +9,4 @@ class Animal {
 }
 
 const dog = new Animal('dog')
+console.log(dog.getName())
